@@ -1,0 +1,28 @@
+
+/**
+ *
+ * @author NISWA
+ */
+
+import java.util.Scanner;
+public class Soal1 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Masukkan nilai n: ");
+        int n = scanner.nextInt();
+        
+        int total = Penjumlaham(n);
+        
+        System.out.println("hasil penjumlahan deret adalah " + total);
+    }
+    
+    public static int Penjumlaham(int N) {
+        int total = 0;
+        for (int i = 1; i <= N; i++) {
+            total += i;
+        }
+        return total;
+    }
+}
