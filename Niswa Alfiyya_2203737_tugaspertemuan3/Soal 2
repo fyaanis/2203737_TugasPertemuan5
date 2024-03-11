@@ -1,0 +1,30 @@
+/**
+ *
+ * @author NISWA
+ */
+
+import java.util.Scanner;
+public class Soal2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Masukkan batas awal: ");
+        int awal = scanner.nextInt();
+        System.out.print("Masukkan batas akhir: ");
+        int akhir = scanner.nextInt();
+        
+        int total = hitung(awal, akhir);
+        
+        System.out.println("Banyaknya bilangan ganjil dari " + awal + " hingga " + akhir + " adalah: " + total);
+    }
+    
+    public static int hitung(int awal, int akhir) {
+        int total = 0;
+        for (int i = awal; i <= akhir; i++) {
+            if (i % 2 != 0) {
+                total++;
+            }
+        }
+        return total;
+    }
+}
