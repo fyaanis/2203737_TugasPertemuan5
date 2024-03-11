@@ -1,0 +1,34 @@
+
+/**
+ *
+ * @author NISWA
+ */
+
+import java.util.Scanner;
+
+public class Soal3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Masukkan nilai n: ");
+        int n = scanner.nextInt();
+        
+        if (n < 0) {
+            System.out.println("Nilai n harus lebih besar dari atau sama dengan 0.");
+        } else {
+            int hasil = faktorial(n);
+            System.out.println(n + "! = " + hasil);
+        }
+    }
+    
+    public static int faktorial(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        int hasil = 1;
+        for (int i = 1; i <= n; i++) {
+            hasil *= i;
+        }
+        return hasil;
+    }
+}
